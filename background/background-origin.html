@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>background-origin</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 30px solid rgba(0, 0, 255, 0.3);
+            padding: 30px;
+            background: url(images/baby.jpg) no-repeat;
+            background-size: contain;
+            /*
+                背景原点：控制背景从什么地方开始显示。
+                默认 padding-box
+                padding-box | border-box | content-box
+            */
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>border-radius</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 200px;
+            color: #ccc;
+            font-size: 50px;
+        }
+
+        div:nth-child(1) {
+            border-radius: 100px;
+        }
+
+        div:nth-child(2) {
+            border-radius: 50%;
+        }
+
+        div:nth-child(3) {
+            border-radius: 200px 0 0 0;
+        }
+
+        div:nth-child(4) {
+            height: 100px;
+            line-height: 100px;
+            /*
+             圆角处理时，脑中要形成圆、圆心、横轴、纵轴的概念，正圆是椭圆的一种特殊情况。
+    可分别设置长、短半径，以“/”进行分隔，遵循“1，2，3，4”规则，“/”前面的1~4个用来设置横轴半径（分别对应横轴1、2、3、4位置 ），“/”后面1~4个参数用来设置纵轴半径（分别对应纵轴1、2、3、4位置 ）
+            */
+            border-radius: 100px/50px;
+        }
+
+        div:nth-child(5) {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        div:nth-child(6) {
+            border-radius: 0 100px;
+        }
+        /*
+            赋值规律： 从左上开始，顺时针赋值，如果这个角没有值 ，取对角；
+        */
+    </style>
+</head>
+<body>
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+<div class="box">6</div>
+</body>
+</html>
